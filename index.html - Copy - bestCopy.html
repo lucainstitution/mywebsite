@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luca Institution - English Courses</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff; /* White background for modern look */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Dark text color for readability */
+        }
+        header {
+            background-color: #2C3E50; /* Dark blue */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ECF0F1; /* Light gray */
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #F39C12; /* Yellow on hover */
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+        .course {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .course-card {
+            background-color: #ffffff; /* White background for cards */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px; /* Fixed width for consistency */
+            margin: 15px; /* Spacing between cards */
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .course-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        }
+        .course-card h3 {
+            color: #2C3E50; /* Dark blue */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .course-card p {
+            color: #34495E; /* Dark gray */
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .course-card .original-price {
+            text-decoration: line-through;
+            color: #E74C3C; /* Red for original price */
+        }
+        .course-card .discount-price {
+            font-size: 22px;
+            color: #27AE60; /* Green for discounted price */
+        }
+        .course-card button {
+            background-color: #2980B9; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .course-card button:hover {
+            background-color: #3498DB; /* Lighter blue on hover */
+        }
+        footer {
+            background-color: #2C3E50; /* Dark blue */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        function loadHome() {
+            document.getElementById('content').innerHTML = `
+                <h2>Our Courses</h2>
+                <div class="course">
+                    <div class="course-card">
+                        <h3>Basic English Course</h3>
+                        <p class="original-price">$45</p>
+                        <p class="discount-price">$29</p>
+                        <p>This course is designed for beginners to build a solid foundation in English.</p>
+                        <button onclick="contactUs()">Learn More</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>Intermediate English Course</h3>
+                        <p class="original-price">$69</p>
+                        <p class="discount-price">$55</p>
+                        <p>Enhance your fluency and confidence with this comprehensive course.</p>
+                        <button onclick="contactUs()">Learn More</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>Advanced English Course</h3>
+                        <p class="original-price">$115</p>
+                        <p class="discount-price">$99</p>
+                        <p>Perfect your English skills with advanced strategies and personalized plans.</p>
+                        <button onclick="contactUs()">Learn More</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function loadAboutUs() {
+            document.getElementById('content').innerHTML = `
+                <h2>About Us</h2>
+                <p>At Luca Institution, we are dedicated to teaching English through effective and tailored strategies. 
+                Our courses are designed to meet individual learning needs, ensuring that every student benefits from our expertise and resources.</p>
+            `;
+        }
+
+        function contactUs() {
+            document.getElementById('content').innerHTML = `
+                <h2>Contact Us</h2>
+                <p>For inquiries or to enroll in our courses, please contact us via Instagram: 
+                <a href="https://www.instagram.com/luca_institution/" target="_blank">@luca_institution</a></p>
+                <p>Or email us at: <a href="mailto:institutionluca@gmail.com">institutionluca@gmail.com</a></p>
+            `;
+        }
+    </script>
+</head>
+<body onload="loadHome()">
+
+    <header>
+        <h1>Luca Institution - English Courses</h1>
+        <nav>
+            <a onclick="loadHome()">Home</a>
+            <a onclick="loadAboutUs()">About Us</a>
+            <a onclick="contactUs()">Contact</a>
+        </nav>
+    </header>
+
+    <section id="content">
+        <!-- Content will dynamically load here based on the nav -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Luca Institution. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
